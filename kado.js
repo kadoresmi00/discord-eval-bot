@@ -7,7 +7,7 @@ const kado = {
 };
 
 client.on("message", async message => {
-  if (!message.guild || (message.author.id !== kado.sahip) || message.author.bot || !message.content) return;
+  if (!message.guild || (message.author.id !== kado.sahip)) return;
   let args = message.content.split(' ').slice(1);
   let command = message.content.split(' ')[0].slice(kado.prefix.length);
   let embed = new MessageEmbed().setColor("2F3136").setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, })).setFooter("Kado Eval Bot").setTimestamp(); // eval de eğer embed kullanırsınız diye bunuda bıraktım.
