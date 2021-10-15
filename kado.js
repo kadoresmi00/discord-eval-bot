@@ -21,8 +21,8 @@ client.on("message", async message => {
     };
     try {
       var evaled = clean(await eval(code));
-      if (evaled.match(new RegExp(`${client.token}`, 'g'))) evaled.replace(client.token, `Bu Komutu Kullanamassın ${message.author.username}`);
-      message.channel.send(`${evaled.replace(client.token, `Bu Komutu Kullanamassın ${message.author.username}`)}`, { code: "js", split: true });
+      if (evaled.match(new RegExp(`${kado.token}`, 'g'))) evaled.replace(kado.token, `Token Paylaşılamaz.`);
+      message.channel.send(`${evaled.replace(kado.token, `Token Paylaşılamaz.`)}`, { code: "js", split: true });
     } catch (err) { message.channel.send(err, { code: "js", split: true }) };
   };
 });
