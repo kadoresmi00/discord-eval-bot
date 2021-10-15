@@ -10,9 +10,9 @@ client.on("message", async message => {
   if (!message.guild || (message.author.id !== kado.sahip) || message.author.bot || !message.content) return;
   let args = message.content.split(' ').slice(1);
   let command = message.content.split(' ')[0].slice(kado.prefix.length);
-  let embed = new MessageEmbed().setColor("2F3136").setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, })).setFooter("Kado ❤ Eval").setTimestamp();
+  let embed = new MessageEmbed().setColor("2F3136").setAuthor(message.member.displayName, message.author.avatarURL({ dynamic: true, })).setFooter("Kado Eval Bot").setTimestamp();
   if (command === "eval" && message.author.id === kado.sahip) {
-    if (!args[0]) return message.reply(`Lütfen Herhangi Bir Kod Belirt :tada:`);
+    if (!args[0]) return message.channel.send("Lütfen bir kod belirtiniz :tada:");
     let code = args.join(' ');
     function clean(text) {
       if (typeof text !== 'string') text = require('util').inspect(text, { depth: 0 })
