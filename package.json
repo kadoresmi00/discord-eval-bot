@@ -1,0 +1,17 @@
+{
+  "name": "kado-bot",
+  "version": "0.0.1",
+  "description": "Kado Bot",
+  "main": "kado.js",
+  "scripts": {
+    "test": "nodemon kado.js"
+  },
+  "author": "Kado",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "node-superfetch": "^0.1.10",
+    "nodemon": "^2.0.6"
+  }
+}
